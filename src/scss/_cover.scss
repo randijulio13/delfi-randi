@@ -1,0 +1,59 @@
+.cover {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+      45deg,
+      rgba($primary, 0.5) 0%,
+      rgba(black, 0.5) 100%,
+      // rgba($accent, 0.5) 100%
+    ),
+    url("./assets/img/bg-img.jpg"), $primary;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition-property: width, transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+
+  &__open {
+    width: 100vw;
+    transform: translateY(-100vh);
+  }
+
+  .title-text {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+      drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+    color: white;
+    font-family: "Sail", system-ui;
+    font-size: 5rem;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .cover {
+    background-size: auto 80vw;
+    &__open {
+      width: calc(100vw - $contentWidth);
+      transform: none;
+    }
+  }
+}

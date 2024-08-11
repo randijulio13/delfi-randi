@@ -1,0 +1,56 @@
+.countdown {
+  padding: 4rem 0;
+  background: linear-gradient(
+      180deg,
+      rgba(black, 0.5) 0%,
+      rgba(black, 0.5) 100%
+      // rgba($accent, 0.5) 100%
+    ),
+    url("./assets/img/bg-clock.jpg");
+  background-size: cover;
+  background-position: center;
+  .title {
+    text-align: center;
+    font-family: "Sail";
+    font-size: clamp(2rem, 10vw, 3rem);
+    color: white;
+  }
+
+  .date-wrapper {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    .date {
+      @include media-breakpoint-up(lg) {
+        height: 6rem;
+      }
+      &:hover {
+        background-color: $primary;
+      }
+      background-color: $primaryLighter;
+      height: 4.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      aspect-ratio: 1/1;
+      border-radius: 999rem;
+      display: flex;
+      justify-content: center;
+      transition: background-color 200ms;
+
+      &-text {
+        @include media-breakpoint-up(lg) {
+          font-size: 2rem;
+        }
+        font-size: 1.5rem;
+        font-family: "Playfair Display";
+        font-weight: 700;
+        line-height: 2rem;
+      }
+    }
+  }
+}

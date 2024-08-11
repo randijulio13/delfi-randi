@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import "./scss/bootstrap";
+
+$contentWidth: calc(100vh * 0.7);
+$portraitHeight: 450px;
+
+// $primary: #bc5a94;
+// $primaryLighter: #f075aa;
+// $secondary: #add899;
+// $accent: #ffde95;
+
+// $primary: #e76b66;
+// $primaryLighter: #f4bcbc;
+// $accent: #97a47c;
+// $accentLighter: #cbd4c5;
+
+$primaryLighter: pink;
+$primary: darken(pink, 10);
+$accentLighter: darkseagreen;
+$accent: darken(darkseagreen, 10);
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $contentWidth;
+  height: 100vh;
+  z-index: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@include media-breakpoint-down(md) {
+  .content {
+    width: 100vw;
+  }
+}
+
+.title {
+  text-align: center;
+  font-family: "Sail";
+  font-size: clamp(2rem, 10vw, 3rem);
+}
+
+.description {
+  font-family: serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: rgba(black, 0.5);
+}
+
+@import "./scss/keyframes";
+@import "./scss/hero";
+@import "./scss/cover";
+@import "./scss/couple";
+@import "./scss/countdown";
+@import "./scss/place";

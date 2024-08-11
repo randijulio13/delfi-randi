@@ -1,0 +1,29 @@
+.place {
+  padding: 4rem 1rem;
+  background: linear-gradient(
+      90deg,
+      rgba($primary, 0.1) 0%,
+      rgba($primary, 0.1) 100%
+    ),
+    url("./assets/img/overlay.png");
+
+  .title {
+    color: $primary;
+  }
+
+  .place {
+    &-info {
+      margin: 2rem 0px;
+    }
+    &-card {
+      margin: 0px 1rem;
+      background: linear-gradient(0deg, rgba(black, 0.5) 0%, rgba(black, 0.5));
+      padding: 2rem 1rem;
+      border-radius: 0.5rem;
+    }
+
+    &-title {
+      color: white;
+    }
+  }
+}
